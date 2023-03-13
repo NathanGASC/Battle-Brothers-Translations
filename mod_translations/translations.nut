@@ -75,14 +75,6 @@ this.translations <- {
 	}
 
 	function getReverse(value){
-		if(!(this.CurrentLanguage in this.Dictionary)){
-			return "I18N LANG NOT FOUND : " + this.CurrentLanguage
-		}
-
-		foreach(key,val in this.Dictionary[this.CurrentLanguage]){
-			if(val == value) return key
-		}
-
-		return this.Dictionary[this.CurrentLanguage][key]
+		return getReverseFromLang([this.CurrentLanguage, value])
 	}
 };

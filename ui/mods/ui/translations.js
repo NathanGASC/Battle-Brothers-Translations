@@ -57,7 +57,9 @@ Translations.prototype.onLangChange = function (oldLang, newLang){
 	this.watchedElement.forEach(function (element) {
 		var text = $(element).html()
 		this.getReverseFromLang(text, oldLang, function (key) {
-			if(key == null || key == undefined) return;
+			if(key == null || key == undefined) {
+				return;
+			}
 			i18n.get(key, function (translatedText) {
 				$(element).html(translatedText)
 			}.bind(this))
@@ -91,6 +93,12 @@ $(document).on('DOMNodeInserted', function(e) {
 traverseDOM(document.body, function(element){
 	if(hasAncestorWithId(element, "console"))return;
 	i18n.watchedElement.push(element);
+})
+
+$(document).click(function (ev) {	
+	//TO REMEMBER : invisible \n can be in the html from the way the game display the element. That's why we have to put them in english version
+	console.log($(ev.target).html()) 
+	console.log("Is watched : " + i18n.watchedElement.includes(ev.target))
 })
 
 if (!Array.prototype.includes) {
@@ -146,4 +154,4 @@ function traverseDOM(node, func) {
 	  traverseDOM(node, func);
 	  node = node.nextSibling;
 	}
-  }
+}

@@ -12,7 +12,6 @@
         o.connectBackend <- function()
         {
             connectBackend()
-            ::Console.log("Translations SQ connecting to Translations JS")
             ::Translations.connect();
             ::Console.log("Translations SQ connected to Translations JS")
 
