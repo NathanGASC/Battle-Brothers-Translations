@@ -1,0 +1,22 @@
+this.fr <- {
+    NEW_CAMPAIGN = "Nouvelle campagne",
+    LOAD_CAMPAIGN = "Charger la campagne",
+    SCENARIOS = "Scénarios",
+    OPTIONS = "Options",
+    TUTORIAL_VIDEOS = "Tutoriels vidéo",
+    CREDITS = "Crédits",
+    QUIT = "Quitter",
+    OPTIONS = "Options",
+    FULLSCREEN = "Plein écran",
+    WINDOW = "Fenêtré",
+    BORDERLESS_WINDOW = "Fenêtré sans bord",
+    VSYNC = "VSync",
+    DISPLAY = "Affichage",
+    RESOLUTION = "Résolution",
+    UI_SCALE = "Taille de l'UI",
+    SCENE_SCALE = "Taille des scènes",
+    CHANGE_TAKE_EFFECT_AFTER_RESTART = "Les changements prennent effets après redémarrage !",
+    CANCEL = "Annuler",
+    APPLY = "Appliquer",
+    OK = "Ok"
+}
